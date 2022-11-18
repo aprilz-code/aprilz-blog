@@ -10,6 +10,9 @@ on:
 jobs:
   deploy-gh-pages:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./server/
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -28,7 +31,6 @@ jobs:
 
       - name: 安装依赖
         run: npm ci
-        working-directory: './docs'
 
       - name: 构建文档
         env:
