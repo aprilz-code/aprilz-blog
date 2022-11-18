@@ -1,5 +1,4 @@
-
-name: 部署文档
+name: 文档部署 🏁
 
 on:
   push:
@@ -11,34 +10,31 @@ jobs:
   deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout ✨
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           # 如果你文档需要 Git 子模块，取消注释下一行
           # submodules: true
 
-
-
-      - name: 设置 Node.js
+      - name: 设置 Node.js 🏮
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: npm
 
-      - name: 安装依赖
+      - name: 安装依赖 ✔
         run: npm ci
 
-      - name: 构建文档
+      - name: 构建文档 🧸
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
           npm run docs:build
-          > docs/src/.vuepress/dist/.nojekyll
-
-      - name: 部署文档
+          > src/.vuepress/dist/.nojekyll
+      - name: 部署文档 🎉
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # 这是文档部署到的分支名称
           branch: gh-pages
-          folder: docs/src/.vuepress/dist
+          folder: src/.vuepress/dist

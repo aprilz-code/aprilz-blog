@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { enNavbar, zhNavbar } from "./navbar";
+import { enSidebar, zhSidebar } from "./sidebar";
 
 export default hopeTheme({
   hostname: "https://losey.top",

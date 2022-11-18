@@ -75023,7 +75023,7 @@ ${COMP_IDENTIFIER}.${fnName} = ${fnName}`;
 var defaultMainFile = "App.vue";
 var welcomeCode = `
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'src/.vuepress/.cache/deps/vue'
 
 const msg = ref('Hello World!')
 <\/script>
