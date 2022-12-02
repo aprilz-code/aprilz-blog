@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://losey.top/aprilz-blog/sitemap.xml
+Sitemap: https://losey.top/sitemap.xml
